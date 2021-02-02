@@ -1,15 +1,31 @@
 {
+<<<<<<< HEAD
   "name": "goldreact",
+=======
+  "name": "busted-client",
+>>>>>>> 92c549b6f4234fcf0dad7f8fc4b2a9b7162e82a9
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+<<<<<<< HEAD
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+=======
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "typescript": "^4.0.3",
+>>>>>>> 92c549b6f4234fcf0dad7f8fc4b2a9b7162e82a9
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -35,5 +51,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   }
+=======
+  },
+  "proxy": "http://localhost:5000"
+>>>>>>> 92c549b6f4234fcf0dad7f8fc4b2a9b7162e82a9
 }
