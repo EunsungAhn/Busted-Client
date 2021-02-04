@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import { withRouter } from "react-router-dom";
 
 import "./Busted.css";
@@ -10,12 +10,18 @@ import siren from "../images/siren.png";
 class Busted extends Component {
   constructor(props) {
     super(props);
+    this.input = createRef();
     this.goToPage = this.goToPage.bind(this);
   };
+
   goToPage = (page) =>  {
     this.props.history.push(page);
   };
-  
+
+  _handleClick = () => {
+    this.input.current.click();
+  };
+
   render() {
     return (
       <div>
@@ -23,12 +29,28 @@ class Busted extends Component {
           <div className="header">Busted!</div>
 
           <div className="body-wrapper">
-            <div className="first-item" onClick={() => this.goToPage("/CameraPage")}>
+            {/* <div>카메라, 갤러리 선택</div>
+            <input type="file" accept="image/*;capture=camera" />
+            
+            <div>카메라 직접 호출</div>
+            <input type="file" accept="image/*" capture="camera" /> */}
+            
+            <div className="first-item" onClick={this._handleClick}>
               <div className="image-wrapper">
                 <img src={camera} alt="camera img" />
               </div>
               <p> 촬영하기 </p>
+              <input type="file" accept="image/*" capture="camera" ref={this.input} />
             </div>
+            
+            {/* <div className="first-item" onClick={() => this.goToPage("/CameraPage")}>
+              <div className="image-wrapper">
+                <img src={camera} alt="camera img" />
+              </div>
+              <p> 촬영하기 </p>
+            </div> */}
+            {/* <input type="file" accept="image/*;capture=camera" /> */}
+            {/* <input type="file" accept="image/*;capture=camera"></input> */}
 
             <div className="second-item" onClick={() => this.goToPage("/GalleryPage")}>
               <div className="image-wrapper">

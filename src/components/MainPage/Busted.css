@@ -66,6 +66,10 @@ p {
     font-size: 1.5rem;
 }
 
+input[type="file"] {
+    display: none;
+}
+
 .standard-info {
     color: rgb(202, 202, 202);
     margin-top: 2rem;
