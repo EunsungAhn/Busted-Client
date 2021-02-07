@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, withRouter } from 'react-router-dom';
 
 import Busted from './components/MainPage/Busted';
 import CameraPage from './components/CameraPage/CameraPage';
@@ -22,4 +22,5 @@ class App extends Component {
   }
 }
 
+// export default withRouter(App);
 export default App;

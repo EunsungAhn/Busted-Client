@@ -27,11 +27,9 @@ class Busted extends Component {
       <div>
         <main className="busted-template">
           <div className="header">Busted!</div>
-
           <div className="body-wrapper">
             {/* <div>카메라, 갤러리 선택</div>
             <input type="file" accept="image/*;capture=camera" />
-            
             <div>카메라 직접 호출</div>
             <input type="file" accept="image/*" capture="camera" /> */}
             
@@ -42,21 +40,12 @@ class Busted extends Component {
               <p> 촬영하기 </p>
               <input type="file" accept="image/*" capture="camera" ref={this.input} />
             </div>
-            
-            {/* <div className="first-item" onClick={() => this.goToPage("/CameraPage")}>
-              <div className="image-wrapper">
-                <img src={camera} alt="camera img" />
-              </div>
-              <p> 촬영하기 </p>
-            </div> */}
-            {/* <input type="file" accept="image/*;capture=camera" /> */}
-            {/* <input type="file" accept="image/*;capture=camera"></input> */}
 
             <div className="second-item" onClick={() => this.goToPage("/GalleryPage")}>
               <div className="image-wrapper">
                 <img src={gallery} alt="gallery img" />
               </div>
-              <p> 불러오기 </p>
+              <p> 갤러리 </p>
             </div>
 
             <div className="third-item" onClick={() => this.goToPage("/ReportPage")}>
@@ -65,6 +54,7 @@ class Busted extends Component {
               </div>
               <p> 신고하기 </p>
             </div>
+            
             <div className="standard-info">화물차 적재불량 기준</div>
           </div>
           <div className="footer">
