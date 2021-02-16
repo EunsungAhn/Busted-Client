@@ -37,9 +37,9 @@ class ReportPage extends Component {
       <div>
         <main className="busted-template">
           <div className="header">
-            <div className="validBtn" onClick={this.goBack}>&lt; 뒤로</div>
+            <div className="valid-btn" onClick={this.goBack}>&lt; 뒤로</div>
             <div>Report</div>
-            <div className="invalidBtn">&lt; 뒤로</div>
+            <div className="invalid-btn">&lt; 뒤로</div>
           </div>
 
           <div className="body-wrapper">

@@ -5,7 +5,7 @@
     justify-content: space-between;
 }
 
-.invalidBtn {
+.invalid-btn {
     position: relative;
     color: #042447;
     background: #042447;
@@ -16,7 +16,7 @@
     line-height: 1.5;
 }
 
-.validBtn {
+.valid-btn {
     position: relative;
     color: white;
     background: #042447;
@@ -28,7 +28,7 @@
     font-weight: bold;
 }
 
-.validBtn:hover {
+.valid-btn:hover {
     cursor: pointer;
     background-color: #042447;
     color: white;

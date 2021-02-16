@@ -26,9 +26,9 @@ class GalleryPage extends Component {
       <div>
         <main className="busted-template">
           <div className="header">
-            <div className="validBtn" onClick={this.goBack}>&lt; 뒤로</div>
+            <div className="valid-btn" onClick={this.goBack}>&lt; 뒤로</div>
             <div>Gallery</div>
-            <div className="validBtn">선택</div>
+            <div className="valid-btn">선택</div>
           </div>
 
           <div className="body-wrapper"></div>
