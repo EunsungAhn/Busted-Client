@@ -1,6 +1,8 @@
 import React, { Component }  from "react";
 import { withRouter } from "react-router-dom";
 
+import './GalleryPage.css'
+
 class GalleryPage extends Component {
   constructor(props) {
     super(props);
