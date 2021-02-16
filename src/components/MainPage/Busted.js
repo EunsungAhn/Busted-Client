@@ -26,7 +26,12 @@ class Busted extends Component {
     return (
       <div>
         <main className="busted-template">
-          <div className="header">Busted!</div>
+          <div className="header">
+            <div className="invalidBtn"></div>
+            <div>Busted!</div>
+            <div className="invalidBtn"></div>
+          </div>
+          
           <div className="body-wrapper">
             {/* <div>카메라, 갤러리 선택</div>
             <input type="file" accept="image/*;capture=camera" />

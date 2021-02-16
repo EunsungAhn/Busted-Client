@@ -1,7 +1,7 @@
 import React, { Component }  from "react";
 import { withRouter } from "react-router-dom";
 
-import './GalleryPage.css'
+import "./GalleryPage.css";
 
 class GalleryPage extends Component {
   constructor(props) {
@@ -26,11 +26,13 @@ class GalleryPage extends Component {
       <div>
         <main className="busted-template">
           <div className="header">
-            <button onClick={this.goBack}>뒤로</button>
-            Gallery
-            <button>선택</button>
-            </div>
+            <div className="valid-btn" onClick={this.goBack}>&lt; 뒤로</div>
+            <div>Gallery</div>
+            <div className="valid-btn">선택</div>
+          </div>
+
           <div className="body-wrapper"></div>
+
           <div className="footer">
             © 2021 DSC PKNU Busted! all rights reserved.
           </div>

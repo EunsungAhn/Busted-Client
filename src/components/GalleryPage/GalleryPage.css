@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+
+.invalid-btn {
+    position: relative;
+    color: #042447;
+    background: #042447;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #042447;
+    border-radius: 0.25rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.valid-btn {
+    position: relative;
+    color: white;
+    background: #042447;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #042447;
+    border-radius: 0.25rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.valid-btn:hover {
+    cursor: pointer;
+    background-color: #042447;
+    color: white;
+    border: 1px solid #042447;
+}
