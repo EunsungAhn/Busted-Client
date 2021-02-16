@@ -21,7 +21,7 @@
     /* vertical-align: top; */
     top: 1px; /* input 요소의 border-top 설정값 만큼 */ 
     left: 1px; /* input 요소의 border-left 설정값 만큼 */ 
-    padding: .8em .5em; /* input 요소의 padding 값 만큼 */ 
+    padding: -0.2em .5em; /* input 요소의 padding 값 만큼 */ 
     color: #999; 
     cursor: text;
 }
@@ -76,4 +76,17 @@
     background-color: #042447;
     color: white;
     border: 1px solid #042447;
+}
+
+.func-btn {
+    position: absolute;
+    width: 80px;
+    background: #c2dfff;
+    padding: 0.5em 1.8rem;
+    border: 1px solid #c2dfff;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align:center;
 }
