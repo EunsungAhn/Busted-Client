@@ -8,6 +8,10 @@ class GalleryPage extends Component {
   constructor(props) {
     super(props);
     this.goToPage = this.goToPage.bind(this);
+    this.state = {
+      file : '',
+      previewURL : ''
+    }
   };
   
   goToPage = (page) =>  {
@@ -39,13 +43,25 @@ class GalleryPage extends Component {
   };
 
   fileChangedHandler = event => {
-    const files = event.target.files;
-    this.setState({
-      selectedFiles: files
-    });
+    event.preventDefault();
+    let reader = new FileReader();
+    let file = event.target.files[0];
+    reader.onloadend = () => {
+      this.setState({
+        file : file,
+        previewURL : reader.result
+      })
+    }
+    reader.readAsDataURL(file);
   };
 
   render() {
+    let img_preview = null;
+    
+    if(this.state.file !== ''){
+      img_preview = <img className='img_preview' src={this.state.previewURL}></img>
+    }
+
     return (
       <div>
         <main className="busted-template">
@@ -56,8 +72,11 @@ class GalleryPage extends Component {
           </div>
 
           <div className="body-wrapper">
-            <label for="select-image" className="select-image-btn">+</label>
-          <input type="file" accept="image/*" id="select-image" onChange={this.fileChangedHandler}></input>
+            <div className="image-wrapper">
+              <label for="select-image" className="select-image-btn">+</label>
+              <input type="file" accept="image/*" id="select-image" onChange={this.fileChangedHandler}></input>
+              {img_preview}
+            </div>
           </div>
 
           <div className="footer">

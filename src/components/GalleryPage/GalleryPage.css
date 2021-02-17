@@ -38,3 +38,11 @@
 .select-image-btn {
     font-size: 5rem;
 }
+
+.select-image-btn:hover {
+    cursor: pointer;
+}
+
+.image-wrapper {
+    border: 2px solid rebeccapurple;
+}
