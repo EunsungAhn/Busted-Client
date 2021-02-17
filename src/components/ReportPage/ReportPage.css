@@ -8,26 +8,52 @@
   font-style: italic;
 }
 
-.spot-wrapper,
-.report-contents {
-    position: relative; 
+/* img {
+    width: 2rem;
+    height: 2rem;
+} */
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    margin-left: 2rem;
+    margin-right: 8.5rem;
+}
+
+.title-accident-pic,
+.title-accident-spot,
+.title-report-contents {
+    float: left;
+}
+
+.spot-wrapper {
+    position: relative;
     width: 300px;
     margin: 15px
 }
 
+.contents-wrapper {
+    position: relative; 
+    width: 400px;
+    margin: 15px
+}
+
 .spot-wrapper label,
-.report-contents label { 
+.contents-wrapper label { 
     position: absolute; 
     /* vertical-align: top; */
     top: 1px; /* input 요소의 border-top 설정값 만큼 */ 
     left: 1px; /* input 요소의 border-left 설정값 만큼 */ 
     padding: -0.2em .5em; /* input 요소의 padding 값 만큼 */ 
-    color: #999; 
+    color: #999;
     cursor: text;
 }
 
-.spot-contents input[type="text"],
-.report-contents input[type="text"] { 
+.spot-wrapper input[type="text"],
+.contents-wrapper input[type="text"] { 
     width: 100%; /* 원하는 너비 설정 */ 
     height: auto; /* 높이값 초기화 */ 
     line-height : normal; /* line-height 초기화 */ 
@@ -38,7 +64,7 @@
     outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */ 
     -webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */ 
     -moz-appearance: none; 
-    appearance: none; 
+    appearance: none;
 }
 
 .header {
@@ -79,7 +105,9 @@
 }
 
 .func-btn {
-    position: absolute;
+    /* position: absolute; */
+    float: right;
+    display: inline-block;
     width: 80px;
     background: #c2dfff;
     padding: 0.5em 1.8rem;
