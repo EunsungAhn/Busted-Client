@@ -109,5 +109,5 @@ class ReportPage extends Component {
     );
   }
 }
-
+ 
 export default withRouter(ReportPage);
