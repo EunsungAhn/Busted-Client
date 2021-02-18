@@ -56,7 +56,7 @@
     color: #999;
     cursor: text;
 }
-
+ 
 .spot-wrapper input[type="text"] { 
     width: 100%; /* 원하는 너비 설정 */ 
     height: auto; /* 높이값 초기화 */ 
