@@ -2,9 +2,6 @@ import React, { Component, createRef } from "react";
 import { withRouter } from "react-router-dom";
 import $ from "jquery";
 
-// import camera_logo from "../images/camera_logo.jpg";
-// import location_logo from "../images/location_logo.png";
-
 import "./ReportPage.css";
 
 class ReportPage extends Component {
