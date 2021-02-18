@@ -1,1 +1,3 @@
-command = "CI= npm run build"
+[build]
+    command  = "yarn build"
+    publish = "build"

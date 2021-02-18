@@ -2,9 +2,6 @@ import React, { Component, createRef } from "react";
 import { withRouter } from "react-router-dom";
 import $ from "jquery";
 
-// import camera_logo from "../images/camera_logo.jpg";
-// import location_logo from "../images/location_logo.png";
-
 import "./ReportPage.css";
 
 class ReportPage extends Component {
@@ -59,17 +56,6 @@ class ReportPage extends Component {
             <div className="title-wrapper">
               <div className="title-accident-pic">* 사진</div>
               <div className="func-btn">촬영/갤러리</div>
-              
-              {/* 아래의 주석 : 버튼 별로 작은 이미지 추가하고 싶었는데 잘 안됨 */}
-              {/* <div className="btn-wrapper">
-                <div className="func-btn">
-                  <div className="logo-wrapper">
-                    <img src={camera_logo} alt="camera logo" />
-                  </div>
-                  촬영/갤러리
-                  </div>                
-              </div> */}
-
             </div>
 
             <br></br>
@@ -92,8 +78,10 @@ class ReportPage extends Component {
 
             <br></br>
             <br></br>
-            
-            <div className="title-report-contents">* 내용</div>
+
+            <div className="title-wrapper">
+              <div className="title-report-contents">* 내용</div>
+            </div>
 
             <div className="contents-wrapper">
               <label for="report-contents">내용을 구체적으로 입력해주세요.</label>
@@ -109,5 +97,5 @@ class ReportPage extends Component {
     );
   }
 }
-
+ 
 export default withRouter(ReportPage);
