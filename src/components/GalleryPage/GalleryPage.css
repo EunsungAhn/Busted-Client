@@ -35,14 +35,16 @@
     border: 1px solid #042447;
 }
 
-.select-image-btn {
-    font-size: 5rem;
+.select-img-btn {
+    font-size: 2rem;
 }
 
-.select-image-btn:hover {
+.select-img-btn:hover {
     cursor: pointer;
 }
 
-.image-wrapper {
-    border: 2px solid rebeccapurple;
+.selected-img {
+    margin-top: 6rem;
+    width: 10rem;
+    height: 10rem;
 }
