@@ -39,7 +39,7 @@ class GalleryPage extends Component {
           <div className="body-wrapper">
             <ImageUploader
               withIcon={true}
-              buttonText='이미지를 선택하세요.'
+              buttonText='이미지를 선택하세요'
               label="최대 사진 크기: 5MB, jpg/gif/png 형식만 가능합니다!"
               onChange={this.onDrop}
               imgExtension={['.jpg', '.gif', '.png', '.gif']}
