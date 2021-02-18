@@ -202,7 +202,7 @@ class GalleryPage extends Component {
       <div>
         <main className="busted-template">
           <div className="header">
-            <div className="valid-btn" onClick={this.goBack}>&lt; 뒤로</div>
+            <div className="valid-btn" onClick={this.goBack}><p>&lt; 뒤로</p></div>
             <div>Gallery</div>
             <div className="invalid-btn">선택</div>
           </div>

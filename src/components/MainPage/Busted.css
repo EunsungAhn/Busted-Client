@@ -3,12 +3,12 @@
 
 .busted-template {
     background: white;
-    width: 560px;
+    width: 20rem;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     font-family: 'Noto Sans KR', serif;
     margin: 0 auto;
     /* px는 고정값, rem은 최상위 태그인 html에 대해 상대적 */
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding-bottom: 2rem;
 }
 
@@ -34,7 +34,7 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 32rem;
+    width: 17rem;
     height: 9rem;
     margin-right: 1.5rem;
     margin-bottom: 1.5rem;
@@ -55,7 +55,7 @@
     width: 6rem;
     height: 6rem;
     margin-left: 2rem;
-    margin-right: 8.5rem;
+    margin-right: 2rem;
 }
 
 img {
@@ -64,7 +64,7 @@ img {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 input[type="file"] {
@@ -74,13 +74,13 @@ input[type="file"] {
 .standard-info {
     color: rgb(202, 202, 202);
     margin-top: 2rem;
-    margin-left: 12rem;
+    margin-left: 4rem;
 }
 
 .footer {
     font-family: 'Fjalla One', sans-serif;
     font-weight: 100;
-    font-size: medium;
+    font-size: small;
     color: rgb(214, 214, 214);
-    margin-left: 9.5rem;
+    margin-left: 3rem;
 }
