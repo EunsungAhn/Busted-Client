@@ -78,11 +78,10 @@ class ReportPage extends Component {
 
             <br></br>
             <br></br>
-            
+
             <div className="title-wrapper">
               <div className="title-report-contents">* 내용</div>
             </div>
-            
 
             <div className="contents-wrapper">
               <label for="report-contents">내용을 구체적으로 입력해주세요.</label>

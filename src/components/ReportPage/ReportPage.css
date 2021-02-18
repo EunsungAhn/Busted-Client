@@ -46,6 +46,12 @@
     margin: 15px
 }
 
+.contents-wrapper {
+    position: relative; 
+    width: 400px;
+    margin: 15px
+}
+
 .spot-wrapper label,
 .contents-wrapper label { 
     position: absolute; 
