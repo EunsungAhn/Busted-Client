@@ -17,6 +17,7 @@
     "react-scripts": "4.0.2",
     "styled-components": "5.2.1",
     "web-vitals": "^1.1.0"
+    "react-images-upload": "^1.2.8",
   },
   "scripts": {
     "start": "react-scripts start",
