@@ -3,6 +3,7 @@
     align-items: center;
     vertical-align: middle;
     justify-content: space-between;
+    
 }
 
 .invalid-btn {
@@ -33,4 +34,18 @@
     background-color: #042447;
     color: white;
     border: 1px solid #042447;
+}
+
+.select-img-btn {
+    font-size: 2rem;
+}
+
+.select-img-btn:hover {
+    cursor: pointer;
+}
+
+.selected-img {
+    margin-top: 6rem;
+    width: 10rem;
+    height: 10rem;
 }
