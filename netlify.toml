@@ -1,12 +1,3 @@
 [build]
     command  = "yarn build"
     publish = "build"
-
-[context.production.environment]
-    TOML_ENV_VAR = "From netlify.com"
-    REACT_APP_TOML_ENV_VAR = "From netlify.toml (REACT_APP_)"
-
-[[redirects]]
-    from = "/"
-    to = "/"
-    status = "200"
