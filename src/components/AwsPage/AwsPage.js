@@ -25,7 +25,7 @@ class AwsPage extends Component {
             <div className="invalid-btn">&lt; 뒤로</div>
           </div>
 
-          <div className="body">
+          <div className="body-wrapper">
             {/* <img
               src="https://desiacw.s3.ap-northeast-2.amazonaws.com/busted/test.png"
               alt="test"
