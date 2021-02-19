@@ -7,9 +7,8 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     font-family: 'Noto Sans KR', serif;
     margin: 0 auto;
-    /* px는 고정값, rem은 최상위 태그인 html에 대해 상대적 */
     margin-top: 3rem;
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
 }
 
 .header {
@@ -24,7 +23,7 @@
 }
 
 .body-wrapper {
-    height: 35rem;
+    height: 40rem;
     padding: 1.5rem 1.1rem 0 1.5rem;
     background-color: white;
     margin: 0 auto;
