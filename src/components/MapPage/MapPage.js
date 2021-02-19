@@ -1,10 +1,6 @@
 /*global kakao*/
 import React, { Component, createRef } from "react";
 import { withRouter } from "react-router-dom";
-import styled from "styled-components";
-
-import "./MapPage.css";
-import "../ReportPage/ReportPage.css";
 import Footer from "../partials/Footer";
 
 class MapPage extends Component {
@@ -122,29 +118,13 @@ class MapPage extends Component {
 
   render() {
     return (
-      <div>
-        <main className="busted-template">
-          <div className="header">
-            <div className="valid-btn" onClick={this.goBack}>&lt; 뒤로</div>
-            <div>Map</div>
-            <div className="invalid-btn">&lt; 뒤로</div>
-          </div>
-          
-          <div className="body-wrapper">
-            <MapContents id="Mymap"></MapContents>
+        <div className="body-wrapper">
+            <div style={{width: "99.5%", height: "94%"}} id="Mymap"></div>
             <div id="clickLatlng"></div>
-          </div>
-
-          <Footer />
-        </main>
-      </div>
+        </div>
     );
   }
 }
 
-const MapContents = styled.div`
-  width: 99.5%;
-  height: 94%;
-`;
 
 export default withRouter(MapPage);
