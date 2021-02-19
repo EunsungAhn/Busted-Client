@@ -21,7 +21,7 @@ class AwsPage extends Component {
             <div className="valid-btn" onClick={this.goBack}>
               &lt; 뒤로
             </div>
-            <div>Aws</div>
+            <div>AWS</div>
             <div className="invalid-btn">&lt; 뒤로</div>
           </div>
 
