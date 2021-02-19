@@ -6,6 +6,7 @@ import Busted from "./components/MainPage/Busted";
 import GalleryPage from "./components/GalleryPage/GalleryPage";
 import ReportPage from "./components/ReportPage/ReportPage";
 import MapPage from "./components/MapPage/MapPage";
+import AwsPage from "./components/AwsPage/AwsPage";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route path="/GalleryPage" component={GalleryPage} />
           <Route path="/ReportPage" component={ReportPage} />
           <Route path="/MapPage" component={MapPage} />
+          <Route path="/AwsPage" component={AwsPage} />
         </Router>
       </div>
     );

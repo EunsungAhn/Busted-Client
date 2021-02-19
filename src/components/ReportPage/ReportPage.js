@@ -6,6 +6,8 @@ import UploadIcon from '../images/UploadIcon.svg'
 import $ from "jquery";
 
 import "./ReportPage.css";
+import MapPage from "../MapPage/MapPage";
+import Footer from "../partials/Footer";
 
 const ERROR = {
   NOT_SUPPORTED_EXTENSION: 'NOT_SUPPORTED_EXTENSION',
@@ -30,14 +32,24 @@ class ReportPage extends Component {
     this.state = {
       pictures: [...props.defaultImages],
       files: [],
-      fileErrors: []
+      fileErrors: [],
+      toggle: false,
     };
 
-    this.inputElement = '';
+    this.inputElement = "";
     this.onDropFile = this.onDropFile.bind(this);
     this.onUploadClick = this.onUploadClick.bind(this);
     this.triggerFileUpload = this.triggerFileUpload.bind(this);
   }
+
+  handleToggle = () => {
+    this.setState({
+      toggle: {
+        ...this.state.toggle,
+        change: !this.state.toggle.change,
+      },
+    });
+  };
 
   componentDidUpdate(prevProps, prevState, snapshot){
     if(prevState.files !== this.state.files){
@@ -52,8 +64,9 @@ class ReportPage extends Component {
   }
 
   hasExtension(fileName) {
-    const pattern = '(' + this.props.imgExtension.join('|').replace(/\./g, '\\.') + ')$';
-    return new RegExp(pattern, 'i').test(fileName);
+    const pattern =
+      "(" + this.props.imgExtension.join("|").replace(/\./g, "\\.") + ")$";
+    return new RegExp(pattern, "i").test(fileName);
   }
 
   onDropFile(e) {
@@ -129,11 +142,17 @@ class ReportPage extends Component {
   }
 
   removeImage(picture) {
-    const removeIndex = this.state.pictures.findIndex(event => event === picture);
-    const filteredPictures = this.state.pictures.filter((event, index) => index !== removeIndex);
-    const filteredFiles = this.state.files.filter((event, index) => index !== removeIndex);
+    const removeIndex = this.state.pictures.findIndex(
+      (event) => event === picture
+    );
+    const filteredPictures = this.state.pictures.filter(
+      (event, index) => index !== removeIndex
+    );
+    const filteredFiles = this.state.files.filter(
+      (event, index) => index !== removeIndex
+    );
 
-    this.setState({pictures: filteredPictures, files: filteredFiles}, () => {
+    this.setState({ pictures: filteredPictures, files: filteredFiles }, () => {
       this.props.onChange(this.state.files, this.state.pictures);
     });
   }
@@ -150,8 +169,15 @@ class ReportPage extends Component {
     const { fileErrors } = this.state;
     return fileErrors.map((fileError, index) => {
       return (
-        <div className={'errorMessage ' + this.props.errorClass} key={index} style={this.props.errorStyle}>
-          * {fileError.name} {fileError.type === ERROR.FILESIZE_TOO_LARGE ? this.props.fileSizeError: this.props.fileTypeError}
+        <div
+          className={"errorMessage " + this.props.errorClass}
+          key={index}
+          style={this.props.errorStyle}
+        >
+          * {fileError.name}{" "}
+          {fileError.type === ERROR.FILESIZE_TOO_LARGE
+            ? this.props.fileSizeError
+            : this.props.fileTypeError}
         </div>
       );
     });
@@ -159,13 +185,17 @@ class ReportPage extends Component {
 
   renderIcon() {
     if (this.props.withIcon) {
-      return <img src={UploadIcon} className="uploadIcon"	alt="Upload Icon" />;
+      return <img src={UploadIcon} className="uploadIcon" alt="Upload Icon" />;
     }
   }
 
   renderLabel() {
     if (this.props.withLabel) {
-      return <p className={this.props.labelClass} style={this.props.labelStyles}>{this.props.label}</p>
+      return (
+        <p className={this.props.labelClass} style={this.props.labelStyles}>
+          {this.props.label}
+        </p>
+      );
     }
   }
 
@@ -183,8 +213,13 @@ class ReportPage extends Component {
     return this.state.pictures.map((picture, index) => {
       return (
         <div key={index} className="uploadPictureContainer">
-          <div className="deleteImage" onClick={() => this.removeImage(picture)}>X</div>
-          <img src={picture} className="uploadPicture" alt="preview"/>
+          <div
+            className="deleteImage"
+            onClick={() => this.removeImage(picture)}
+          >
+            X
+          </div>
+          <img src={picture} className="uploadPicture" alt="preview" />
         </div>
       );
     });
@@ -222,25 +257,43 @@ class ReportPage extends Component {
   };
 
   render() {
+    const { toggle } = this.state;
+
+    // const tmpStyle = {
+    //   position: "relative",
+    //   display: "flex",
+    //   // align-items: "center",
+    //   // justify-content: "center",
+    //   width: "100%",
+    // };
+
+    console.log(toggle);
     return (
       <div>
         <main className="busted-template">
           <div className="header">
-            <div className="valid-btn" onClick={this.goBack}>&lt; 뒤로</div>
+            <div className="valid-btn" onClick={this.goBack}>
+              &lt; 뒤로
+            </div>
             <div>Report</div>
             <div className="invalid-btn">&lt; 뒤로</div>
           </div>
 
           <div className="body-wrapper">
-            
             <div className="title-wrapper">
               <div className="title-accident-pic">* 사진</div>
               {/* <div className="func-btn">촬영/갤러리</div> */}
             </div>
 
             {/* 이미지 업로드 시작 부분 */}
-            <div className={"fileUploader " + this.props.className} style={this.props.style}>
-              <div className="fileContainer" style={this.props.fileContainerStyle}>
+            <div
+              className={"fileUploader " + this.props.className}
+              style={this.props.style}
+            >
+              <div
+                className="fileContainer"
+                style={this.props.fileContainerStyle}
+              >
                 {/* {this.renderIcon()}
                 {this.renderLabel()} */}
 
@@ -252,28 +305,35 @@ class ReportPage extends Component {
                 >
                   {this.props.buttonText}
                 </button>
-          
+
                 <input
                   type="file"
-                  ref={input => this.inputElement = input}
+                  ref={(input) => (this.inputElement = input)}
                   name={this.props.name}
                   multiple={!this.props.singleImage}
                   onChange={this.onDropFile}
                   onClick={this.onUploadClick}
                   accept={this.props.accept}
                 />
-          
-                { this.props.withPreview ? this.renderPreview() : null }
+
+                {this.props.withPreview ? this.renderPreview() : null}
               </div>
             </div>
-
-            {/* <div className="tmp-tmp-tmp">차량 이미지 보일 공간</div> */}
 
             <br></br>
 
             <div className="title-wrapper">
               <div className="title-accident-spot">* 발생지역</div>
-              <div className="func-btn" onClick={() => this.goToPage("/MapPage")}>위치 찾기</div>
+              <div
+                className="func-btn"
+                onClick={() => this.goToPage("/MapPage")}
+                // onClick={() => {
+                //   this.setState({ toggle: !toggle });
+                // }}
+              >
+                {/* {toggle ? <MapPage /> : "위치 찾기"} */}
+                위치 찾기
+              </div>
             </div>
             
             <div className="spot-wrapper">
@@ -281,6 +341,7 @@ class ReportPage extends Component {
               <input type="text" id="location"></input>
             </div>
 
+            <br></br>
             <br></br>
 
             <div className="title-wrapper">
@@ -293,9 +354,7 @@ class ReportPage extends Component {
             </div>
           </div>
 
-          <div className="footer">
-            © 2021 DSC PKNU Busted! all rights reserved.
-          </div>
+          <Footer />
         </main>
       </div>
     );

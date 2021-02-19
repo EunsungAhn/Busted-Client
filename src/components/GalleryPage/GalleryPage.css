@@ -117,7 +117,7 @@
 
 .fileContainer, .uploadPicturesWrapper {
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	justify-content: center;
 	width: 100%;
 }

@@ -6,6 +6,7 @@ import "./Busted.css";
 import camera from "../images/camera.png";
 import gallery from "../images/gallery.png";
 import siren from "../images/siren.png";
+import cctv from "../images/cctv.png";
 
 class Busted extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class Busted extends Component {
             
             <div className="first-item" onClick={this._handleClick}>
               <div className="image-wrapper">
-                <img src={camera} alt="camera img" />
+                <img className="icon-img" src={camera} alt="camera img" />
               </div>
               <p> 촬영하기 </p>
               <input type="file" accept="image/*" capture="camera" ref={this.input} />
@@ -48,19 +49,29 @@ class Busted extends Component {
 
             <div className="second-item" onClick={() => this.goToPage("/GalleryPage")}>
               <div className="image-wrapper">
-                <img src={gallery} alt="gallery img" />
+                <img className="icon-img" src={gallery} alt="gallery img" />
               </div>
               <p> 갤러리 </p>
             </div>
 
             <div className="third-item" onClick={() => this.goToPage("/ReportPage")}>
               <div className="image-wrapper">
-                <img src={siren} alt="siren img" />
+                <img className="icon-img" src={siren} alt="siren img" />
               </div>
               <p> 신고하기 </p>
             </div>
+
+            <div
+              className="fourth-item"
+              onClick={() => this.goToPage("/AwsPage")}
+            >
+              <div className="image-wrapper">
+                <img className="icon-img" src={cctv} alt="cctv img" />
+              </div>
+              <p> 블랙박스 </p>
+            </div>
             
-            <div className="standard-info">화물차 적재불량 기준</div>
+            {/* <div className="standard-info">화물차 적재불량 기준</div> */}
           </div>
           <div className="footer">
             © 2021 DSC PKNU Busted! all rights reserved.
